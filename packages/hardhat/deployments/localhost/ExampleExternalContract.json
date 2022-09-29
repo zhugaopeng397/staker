@@ -1,0 +1,88 @@
+{
+  "address": "0x4c5859f0F772848b2D91F1D83E2Fe57935348029",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "stakerContractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "abort",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "complete",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "completed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x0131cfb8954ee1766b66564812f26916e0d7c0979fee5d8dd57b550c61d85efb",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x4c5859f0F772848b2D91F1D83E2Fe57935348029",
+    "transactionIndex": 0,
+    "gasUsed": "119707",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x9039f321cb6cc83a44198a37c43728f73eb778d64a492f7ac04b519316f4d970",
+    "transactionHash": "0x0131cfb8954ee1766b66564812f26916e0d7c0979fee5d8dd57b550c61d85efb",
+    "logs": [],
+    "blockNumber": 85,
+    "cumulativeGasUsed": "119707",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "a8d1e0cc215050b3b171912224f5c872",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"stakerContractAddress\",\"type\":\"address\"}],\"name\":\"abort\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"complete\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"completed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ExampleExternalContract.sol\":\"ExampleExternalContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/ExampleExternalContract.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.4;  //Do not change the solidity version as it negativly impacts submission grading\\n\\ncontract ExampleExternalContract {\\n\\n  bool public completed;\\n\\n  function complete() public payable {\\n    completed = true;\\n  }\\n\\n  function abort(address payable stakerContractAddress) public {\\n    stakerContractAddress.transfer(address(this).balance);\\n    completed = false;\\n  }\\n\\n}\\n\",\"keccak256\":\"0x46390db9e9e7da29e59cd120b24ee1e5c55d4f31bcb3cbfedfd558b1d68aed53\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610133806100206000396000f3fe60806040526004361060305760003560e01c8063522e117714603557806390cbfa191460485780639d9a7fe9146063575b600080fd5b60466000805460ff19166001179055565b005b348015605357600080fd5b506046605f36600460d1565b608f565b348015606e57600080fd5b50600054607b9060ff1681565b604051901515815260200160405180910390f35b6040516001600160a01b038216904780156108fc02916000818181858888f1935050505015801560c3573d6000803e3d6000fd5b50506000805460ff19169055565b60006020828403121560e1578081fd5b81356001600160a01b038116811460f6578182fd5b939250505056fea2646970667358221220f092472ea8d88197a1c7ce372ce55dd4b79563fd89d08c7b91883406aef146b264736f6c63430008040033",
+  "deployedBytecode": "0x60806040526004361060305760003560e01c8063522e117714603557806390cbfa191460485780639d9a7fe9146063575b600080fd5b60466000805460ff19166001179055565b005b348015605357600080fd5b506046605f36600460d1565b608f565b348015606e57600080fd5b50600054607b9060ff1681565b604051901515815260200160405180910390f35b6040516001600160a01b038216904780156108fc02916000818181858888f1935050505015801560c3573d6000803e3d6000fd5b50506000805460ff19169055565b60006020828403121560e1578081fd5b81356001600160a01b038116811460f6578182fd5b939250505056fea2646970667358221220f092472ea8d88197a1c7ce372ce55dd4b79563fd89d08c7b91883406aef146b264736f6c63430008040033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/ExampleExternalContract.sol:ExampleExternalContract",
+        "label": "completed",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      }
+    ],
+    "types": {
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}
